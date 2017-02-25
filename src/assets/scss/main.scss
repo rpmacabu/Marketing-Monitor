@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,800');
+
+$gradient: linear-gradient(to bottom, $secondary-color, $primary-color 30%);
+
+.two-columns {
+	column-count: 2;
+}
+
+.primary-color {
+	color: $primary-color;
+}
+
+.secondary-color {
+	color: $secondary-color;
+}
+
+.split-text {
+	@extend .two-columns;
+}
+
+.full-section {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.lead-box {
+	font-size: 1.5rem;
+}
+
+.container {
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+	@include breakpoint(medium) {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	@include breakpoint(large) {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
+
+section {
+	font-size: 1.2rem;
+}
+
+.hero {
+	background-image: linear-gradient(to bottom, $yellow, $primary-color 30%), url(../img/hero-image.jpg);
+	//background-color: $primary-color;
+	background-blend-mode: multiply;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.site-header {
+	padding: 10px 30px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.main-nav {
+	list-style: none;
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .9rem;
+
+	@include breakpoint(medium) {
+		float: right;
+		
+		li {
+			display: inline-block;
+			margin-right: 10px;
+
+			&:after {
+				content: "|";
+				color: $yellow;
+				margin-left: 10px;
+			}
+
+			&:last-child:after {
+				display: none;
+			}
+
+			a {
+				color: $white;
+			}
+		}
+	}
+}
+
+.inner-box-media {
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.inner-box-left {
+	padding: 1rem;
+
+	@include breakpoint(medium) {
+		padding-left: 10%;
+		padding-right: 10rem;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	@include breakpoint(large) {
+		padding-left: 15%;
+	}
+}
+
+.inner-box-right {
+	padding: 1rem;
+
+	@include breakpoint(medium) {
+		padding-right: 10%;
+		padding-left: 10rem;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	@include breakpoint(large) {
+		padding-right: 15%;
+	}
+}
+
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: darken($primary-color, 10%);
+	font-weight: 800;
+	font-size: 1.25rem;
+
+	li {
+		&:before {
+			content: ">";
+			color: $secondary-color;
+			margin-right: 10px;
+		}
+
+	}
+}
+
+.accent-ui {
+	color: $white;
+	background-image: $gradient;
+	background-color: $primary-color;
+
+	h1 {
+		color: $yellow;
+	}
+
+	.list {
+		color: $white;
+	}
+}
