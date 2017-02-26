@@ -1,26 +1,29 @@
 <header class="site-header">
     <div class="row expanded align-middle">
-        <div class="medium-3">
+        <div class="small-12 large-3">
             <a href="#" class="brand">
                 <img src="{{root}}assets/img/logo-marketing-monitor.png" alt="Logo Marketing Monitor">
             </a>
+            <button class="menu-trigger hide-for-large" data-toggle="menu" aria-controls="menu"> 
+                <span class="menu-bars"></span>
+            </button>
         </div>
-        <div class="medium-9">
-            <ul class="main-nav">
+        <div class="small-12 large-9">
+            <ul class="main-nav" id="menu" data-toggler="is-open">
                 <li>
-                    <a href="#">Por que usar?</a>
+                    <a href="#por-que-usar">Por que usar?</a>
                 </li>
                 <li>
-                    <a href="#">Para quem?</a>
+                    <a href="#para-quem">Para quem?</a>
                 </li>
                 <li>
-                    <a href="#">Áreas de atuação</a>
+                    <a href="#areas-de-atuacao">Áreas de atuação</a>
                 </li>
                 <li>
-                    <a href="#">Gerenciamento</a>
+                    <a href="#gerenciamento">Gerenciamento</a>
                 </li>
                 <li>
-                    <a href="#">Característica</a>
+                    <a href="#caracteristicas">Características</a>
                 </li>
             </ul>
         </div>
@@ -28,62 +31,66 @@
 </header>
 
 <section class="hero">
-    <img src="{{root}}assets/img/logo-marketing-monitor-vertical.png" alt="Logo Marketing Monitor">
+    <img src="{{root}}assets/img/logo-marketing-monitor-vertical.png" alt="Logo Marketing Monitor" class="hero-image">
+
+    <a href="#sobre" class="scroll-down">
+        <img src="{{root}}assets/img/arrow-down.svg" alt="Scroll Down">
+    </a>
 </section>
 
-<section class="full-width">
-    <div class="container split-text">
+<section class="full-width" id="sobre">
+    <article class="container split-text">
         <p><b class="primary-color">Marketing Monitor</b> é uma ferramenta digital, que traz segurança e otimiza seu investimento em ativações de marketing e vendas.</p>
         <p>Através do monitoramento das ações de campo, o Marketing Monitor  aumenta a eficiência das suas ações e produtividade da equipe envolvida, além de proporcionar o levantamento e acompanhamento das informações em <b>tempo real.</b></p>
         <p>Para contrartar ou tirar dúvidas: <br><b class="secondary-color">contato@marketingmonitor.com.br</b></p>
-    </div>
+    </article>
 </section>
 
-<section class="full-width accent-ui">
+<section class="full-width accent-ui" id="por-que-usar">
     <div class="row expanded align-middle">
-        <div class="inner-box-media medium-4">            
+        <figure class="inner-box-media medium-4">            
             <img src="{{root}}assets/img/arrow.png" alt="">           
-        </div>
-        <div class="inner-box-right lead-box medium-8">
+        </figure>
+        <article class="inner-box-right lead-box medium-8">
             <p>Mais <b>produtividade</b>.</p> 
             <p>Maior retorno do <b>investimento</b>.</p> 
             <p>Maior <b>proximidade</b> com a equipe no campo.</p> 
             <p>Maior compartilhamento das <b>informações</b>.</p> 
             <p>Maior <b>parceria</b> com fornecedores.</p>
             <p>Melhores <b>resultados</b> com economia de recursos.</p>
-        </div>
+        </article>
     </div>
 </section>
 
 <section id="para-quem">
     <div class="row expanded align-middle">
-        <div class="inner-box-left medium-6">
+        <article class="inner-box-left small-12 large-6">
             <h1>
                 Para quem?
             </h1>
             <p>Nossa ferramenta integra os <b>gestores</b> de diversas áreas às ações no campo, azeitando os canais de comunicação, distribuindo melhor as informações, elevando a produtividade, ampliando o controle e tornando suas atividades de marcas mais efetivas.</p>
 
-            <ul class="list">
+            <ul class="list hide-for-large-only">
                 <li>Gestores de marketing</li>
                 <li>Agências de Marketing promocional, Eventos, Publicidade e Comunicação Integrada</li>
             </ul>
-        </div>
-        <div class="inner-box-media medium-6">            
+        </article>
+        <figure class="inner-box-media small-12 large-6 hide-for-small-only">            
             <img src="{{root}}assets/img/image01.jpg" alt="">           
-        </div>
+        </figure>
     </div>
 </section>
 
-<section class="full-width accent-ui" id="para-quem">
+<section class="full-width accent-ui" id="areas-de-atuacao">
     <div class="container">
         <div class="row expanded align-middle">
-            <div class="medium-6">
+            <article class="content-left small-12 large-6">
                 <h1>
                     Área de Atuação
                 </h1>
                 <p>O Marketing Monitor foi criado para o monitoramento de quaisquer ações no campo, onde as marcas e empresas podem  interagir diretamente com o consumidor, gerando experiências enriquecedoras e ampliando suas vendas.</p>
-            </div>
-            <div class="medium-6">
+            </article>
+            <article class="small-12 large-6">
                 <ul class="list two-columns">
                     <li>Blitz/Sampling</li>
                     <li>Degustação</li>
@@ -94,7 +101,7 @@
                     <li>Campanha de incentivo</li>
                     <li>Promoção de Vendas</li>
                 </ul>
-            </div>
+            </article>
         </div>
     </div>
 </section>
@@ -144,26 +151,26 @@
     </div>
 </section>
 
-<section class="accent-ui" id="para-quem">
+<section class="accent-ui" id="gerenciamento">
     <div class="row expanded align-middle">
-        <div class="inner-box-left medium-6">
+        <article class="inner-box-left small-12 large-6">
             <h1>
                 Painel Gerencial
             </h1>
             <p>Através do Painel Gerencial do Marketing Monitor, o gestor otimiza seu tempo, pode cuidar de diversas <b>ações simultâneas</b> em <b>tempo real</b> e ainda possui um histórico de informações para análise e compartilhamento.</p>
-        </div>
-        <div class="inner-box-media medium-6">            
+        </article>
+        <figure class="inner-box-media small-12 large-6 hide-for-small-only">            
             <img src="{{root}}assets/img/image02.jpg" alt="">           
-        </div>
+        </figure>
     </div>
 </section>
 
-<section id="para-quem">
+<section id="caracteristicas">
     <div class="row expanded align-middle">
-        <div class="inner-box-media medium-6">            
+        <figure class="inner-box-media small-12 large-6">            
             <img src="{{root}}assets/img/image03.jpg" alt="">           
-        </div>
-        <div class="inner-box-right medium-6">
+        </figure>
+        <article class="inner-box-right small-12 large-6">
             <h1>
                 Características
             </h1>            
@@ -179,21 +186,21 @@
                 <li>On Line ou Off Line</li>
                 <li>Informações em Tempo Real</li>
             </ul>
-        </div>
+        </article>
     </div>
 </section>
 
 <section class="full-width accent-ui">
     <div class="container">
         <div class="row expanded align-middle">
-            <div class="contact medium-6">
+            <div class="contact content-left small-12 large-6">
                 <p>Garanta a eficiência na execução e o retorno do seu investimento em ações de campo com o Marketing Monitor. <b>Contrate agora!</b></p>
 
                 <p><b class="yellow-color">contato@marketingmonitor.com.br</b></p>
             </div>
-            <div class="medium-5 medium-offset-1">
-                <div class="row">
-                    <div class="columns medium-4">
+            <div class="small-12 large-5 large-offset-1">
+                <div class="row text-center medium-text-left">
+                    <div class="columns small-12 medium-6 large-4">
                         <div class="supporter">
                             <span class="supporter-role">Projeto:</span>
                             
@@ -203,7 +210,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="columns medium-4">
+                    <div class="columns small-12 medium-6 large-4">
                         <div class="supporter">
                             <span class="supporter-role">Desenvolvimento:</span>
                             
@@ -218,3 +225,27 @@
         </div>
     </div>
 </section>
+
+<footer class="site-footer">
+    <div class="row expanded align-middle text-center medium-text-left">
+        <div class="small-12 medium-4">
+           <img src="{{root}}assets/img/logo-marketing-monitor.png" alt="Logo Marketing Monitor" class="footer-logo">
+           <span class="copyright">
+               &copy; todos os direitos reservados
+           </span>
+        </div>
+        <div class="small-12 medium-8">
+            <ul class="footer-nav">
+                <li>
+                    <a href="#">Fale Conosco</a>
+                </li>
+                <li>
+                    <a href="#">Site Wedo</a>
+                </li>
+                <li>
+                    <a href="#">Site Movin</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

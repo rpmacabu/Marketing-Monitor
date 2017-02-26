@@ -6,8 +6,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Marketing Monitor</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="icon" type="image/png" href="{{root}}assets/img/favicon.png">
 </head>
 <body>
 
@@ -20,6 +21,35 @@
         'use strict';
 
         $(function() {
+            //Scroll to section
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 10
+                    }, 1000);
+                }
+            });
+
+            //Topbar effect
+                $(window).scroll(function() {
+                    if ($(document).scrollTop() > 80) {
+                        $('.site-header').addClass('shrink');
+                    } else {
+                        $('.site-header').removeClass('shrink');
+                    }
+                });
+            
+
+            //Close menu when click menu-item in mobile
+            if ($(window).width() < 1000) {                    
+                $('.main-nav li').on('click', function(){
+                    $(".main-nav").toggleClass('is-open');
+                });
+            }                
+
             $('.owl-carousel').owlCarousel({
                 navText: ["<img src='{{root}}assets/img/prev.svg'>","<img src='{{root}}assets/img/next.svg'>"],
                 loop:false,
@@ -27,17 +57,18 @@
                 margin:0,
                 responsiveClass:true,
                 nav:true,
+                autoHeight: true,
                 responsive:{
                     0:{
                         items:1
                     },
-                    640:{
+                    720:{
                         items:2
                     },
                     1200:{
                         items:3
                     },
-                    1600:{
+                    1640:{
                         items:4
                     }
                 }
