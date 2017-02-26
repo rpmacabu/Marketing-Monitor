@@ -2,18 +2,47 @@
 
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
-  </head>
-  <body>
+</head>
+<body>
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> body}}
 
     <script src="{{root}}assets/js/app.js"></script>
-  </body>
+
+    <script>
+        'use strict';
+
+        $(function() {
+            $('.owl-carousel').owlCarousel({
+                navText: ["<img src='{{root}}assets/img/prev.svg'>","<img src='{{root}}assets/img/next.svg'>"],
+                loop:false,
+                slideBy:4,
+                margin:0,
+                responsiveClass:true,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    640:{
+                        items:2
+                    },
+                    1200:{
+                        items:3
+                    },
+                    1600:{
+                        items:4
+                    }
+                }
+            })
+        });
+    </script>
+</body>
 </html>

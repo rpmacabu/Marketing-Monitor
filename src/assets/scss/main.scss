@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,800');
+@import "components/owl-carousel/owl.carousel";
 
 $gradient: linear-gradient(to bottom, $secondary-color, $primary-color 30%);
+
+.heading-small {
+	font-size: 1.2rem;
+	color: darken($primary-color, 10%);
+}
 
 .two-columns {
 	column-count: 2;
@@ -14,11 +20,19 @@ $gradient: linear-gradient(to bottom, $secondary-color, $primary-color 30%);
 	color: $secondary-color;
 }
 
+.yellow-color {
+	color: $yellow;
+}
+
+.bold {
+	font-weight: 700;
+}
+
 .split-text {
 	@extend .two-columns;
 }
 
-.full-section {
+.full-width {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 }
@@ -164,4 +178,71 @@ section {
 	.list {
 		color: $white;
 	}
+}
+
+.owl-nav {
+	font-size: 32px;
+}
+
+.owl-prev, .owl-next {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 50%;
+	margin-top: -16px;
+
+	&.disabled {
+		opacity: 0;
+	}
+
+	img {
+		display: block;
+	}
+}
+
+.owl-prev {
+	left: 0;	
+}
+
+.owl-next {
+	right: 0;
+}
+
+.owl-item {
+	&:nth-child(odd) {
+		background-color: $light-gray;
+	}
+}
+
+.feature-box {
+	padding: 3rem;
+	font-size: 1rem;
+}
+
+.contact {
+	border-right: 1px solid $yellow;
+}
+
+.supporter {
+	a {
+		display: block;
+	}
+}
+
+.supporter-role {
+	display: block;
+	font-size: .8rem;
+	margin-bottom: 10px;
+}
+
+.supporter-brand {	
+	height: 36px;
+	margin-bottom: 5px;		
+}
+
+.supporter-url {
+	display: block;
+	font-size: .9rem;
+	color: $yellow;
+	font-weight: 700;
 }
